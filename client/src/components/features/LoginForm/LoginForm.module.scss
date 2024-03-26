@@ -1,0 +1,46 @@
+@import '../../../styles/settings.scss';
+
+.form {
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  background-color: $color-light;
+
+  .alert {
+    text-align: center;
+  }
+
+  .eye {
+    color: $color-blue;
+  }
+
+  .formLabel {
+    color: $color-dark;
+  }
+}
+.buttonContainer {
+  background-color: $color-light;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+
+  .buttonSubmit {
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+    background-color: $color-light;
+    color: $color-LightGreen;
+    border: none;
+    transition: all 0.9s;
+
+    &:hover {
+      background-color: $color-darkGreen;
+    }
+  }
+}
+.alert {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 20px;
+}

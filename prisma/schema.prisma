@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          String      @id @default(uuid())
+  title       String
+  photo       String
+  price       Decimal
+  description String      @default("") @db.VarChar(5000)
+  cartItems   CartItem[]
+  orderItems  OrderItem[] @relation(name: "ProductToOrderItem")
+}
+
+model Cart {
+  id        String     @id @default(uuid())
+  user      User       @relation("UserToCart", fields: [userId], references: [id], onDelete: Cascade)
+  userId    String     @unique
+  cartItems CartItem[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model CartItem {
+  id        String   @id @default(uuid())
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  cartId    String
+  product   Product  @relation(fields: [productId], references: [id])
+  productId String
+  amount    Int
+  color     String
+  size      String
+  comment   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Order {
+  id         String      @id @default(uuid())
+  user       User        @relation(fields: [userId], references: [id])
+  userId     String
+  date       DateTime
+  priceSum   Decimal
+  comment    String?
+  clientName String?
+  email      String?
+  address    String?
+  orderItems OrderItem[]
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId   String
+  product   Product  @relation(name: "ProductToOrderItem", fields: [productId], references: [id])
+  productId String
+  amount    Int
+  color     String
+  size      String
+  comment   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id       String    @id @default(uuid())
+  email    String    @unique
+  name     String?
+  address  String?
+  role     Role      @default(USER)
+  cart     Cart?     @relation("UserToCart")
+  cartId   String?   @unique
+  orders   Order[]
+  password Password?
+}
+
+model Password {
+  id             String @id @default(uuid())
+  hashedPassword String
+  user           User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         String @unique
+}

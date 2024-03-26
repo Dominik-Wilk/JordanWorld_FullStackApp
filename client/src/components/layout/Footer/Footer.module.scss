@@ -1,0 +1,51 @@
+@import '../../../styles/settings.scss';
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: white;
+
+  .footerTitle {
+    padding-top: 10px;
+    color: $color-blue;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .icons {
+    span {
+      font-size: 30px;
+      color: $color-lightGrey;
+      transition: all 0.3s ease-in-out;
+    }
+    .facebook span:hover {
+      color: #0866ff;
+    }
+    .pinterest span:hover {
+      color: #bd081c;
+    }
+    .instagram span:hover {
+      background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+      );
+      background-clip: text;
+      color: transparent;
+    }
+
+    .youtube span:hover {
+      color: #ff0000;
+    }
+  }
+
+  .copyRight {
+    color: $color-blue;
+    font-size: 12px;
+    padding: 10px 0;
+  }
+}

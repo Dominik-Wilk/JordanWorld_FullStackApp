@@ -1,0 +1,34 @@
+@import '../../../styles/settings.scss';
+
+.amountCard {
+  .title {
+    text-align: center;
+  }
+
+  .amountContainer {
+    display: flex;
+
+    * {
+      width: 100%;
+      text-align: center;
+    }
+
+    .button {
+      max-width: 100px;
+      background-color: $color-dark;
+      border: none;
+    }
+
+    .button:hover {
+      background-color: $color-LightGreen;
+    }
+
+    .button:active {
+      background-color: $color-darkGreen;
+    }
+
+    input {
+      margin: 0 20px;
+    }
+  }
+}

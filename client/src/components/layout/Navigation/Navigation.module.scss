@@ -1,0 +1,76 @@
+@import '../../../styles/settings.scss';
+
+.navBar {
+  padding: 10px;
+  background-color: $color-light;
+  .navLogo {
+    width: 140px;
+  }
+  .navBrand {
+    margin-left: 10px;
+  }
+
+  .nav {
+    align-items: center;
+
+    .navLink {
+      color: $color-dark;
+      margin-left: 20px;
+      font-size: 20px;
+    }
+
+    .loggedInfo {
+      color: $color-LightGreen;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+
+      span {
+        color: $color-dark;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .navBrand:hover,
+  .navLink:hover,
+  .loggedInfo:hover {
+    color: $color-LightGreen;
+  }
+
+  .user {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navBar {
+    .navLogo {
+      width: 100px;
+    }
+    .navBrand {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .nav {
+      align-items: center;
+
+      .navLink {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+@media (max-width: 769px) {
+  .navBar {
+    .navLogo {
+      width: 140px;
+    }
+    .navCont {
+      font-size: 18px;
+    }
+  }
+}

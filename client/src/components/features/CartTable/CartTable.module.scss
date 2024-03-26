@@ -1,0 +1,151 @@
+@import '../../../styles/settings.scss';
+
+.cartTable {
+  .tableContainer {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    overflow-x: auto;
+  }
+
+  .tableProducts,
+  .tableTotal {
+    border-color: $color-LightGreen;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .namesColumn,
+  .number,
+  .image,
+  .title,
+  .amount,
+  .amountOptions,
+  .size,
+  .sizeOptions,
+  .color,
+  .colorOptions,
+  .priceItem,
+  .totalPrice,
+  .comment,
+  .tableButtons,
+  .amountTotal,
+  .priceTotal,
+  .namesTotal {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .image {
+    min-width: 100px;
+    max-width: 120px;
+    height: 100px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      max-width: 150px;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .tbody .size {
+    width: 120px;
+  }
+
+  .sizeOptions option,
+  .colorOptions option {
+    color: $color-LightGreen;
+  }
+
+  .sizeOptions {
+    width: 100px;
+  }
+  .colorOptions {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 120px;
+  }
+
+  .tbody .amount {
+    width: 90px;
+  }
+
+  .tbody .priceItem {
+    width: 75px;
+    padding: 0 5px;
+  }
+
+  .tbody .totalPrice {
+    width: 100px;
+    padding: 0 5px;
+  }
+
+  .comment textarea {
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+.modalTitle {
+  font-size: 24px;
+}
+
+.modalBody {
+  color: $color-LightGreen;
+  text-align: center;
+}
+
+.tableButtons .buttonDelete,
+.tableButtons .buttonUpdate,
+.modalFooter .button,
+.modalFooter .buttonDelete {
+  color: $color-light;
+  border: none;
+  transition: background-color 0.9s;
+}
+
+.tableButtons .buttonDelete,
+.tableButtons .buttonUpdate {
+  text-align: center;
+  font-size: 14px;
+  margin: 5px;
+  width: 80%;
+}
+
+.modalFooter .button,
+.modalFooter .buttonDelete {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.tableButtons .buttonUpdate,
+.modalFooter .button {
+  background-color: $color-LightGreen;
+}
+
+.tableButtons .buttonUpdate:hover,
+.modalFooter .button:hover {
+  background-color: $color-darkGreen;
+}
+
+.tableButtons .buttonDelete {
+  background-color: $color-error;
+}
+
+.tableButtons .buttonDelete:hover {
+  background-color: $color-error;
+}
+
+.modalFooter .buttonDelete {
+  background-color: $color-LightGreen;
+}
+
+.modalFooter .buttonDelete:hover {
+  background-color: $color-darkGrey;
+}

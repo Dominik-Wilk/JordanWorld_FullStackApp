@@ -1,0 +1,132 @@
+@import '../../../styles/settings.scss';
+
+.cartTable {
+  .tableContainer1 {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table1,
+  .table2 {
+    border-color: $color-LightGreen;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .image {
+    min-width: 100px;
+    max-width: 120px;
+    height: 100px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      max-width: 150px;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .tableContainer1,
+  .tableContainer2 {
+    background-color: $color-light;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .names,
+  .number,
+  .image,
+  .productTitle,
+  .amount,
+  .size,
+  .color,
+  .price,
+  .totalPrice,
+  .comment {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .number,
+  .image,
+  .productTitle,
+  .amount,
+  .size,
+  .color,
+  .price,
+  .totalPrice,
+  .comment {
+    color: $color-darkGreen;
+  }
+}
+
+.cart .container {
+  background-color: $color-light;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.cart .form {
+  margin-top: 40px;
+}
+
+.cart .formLabel {
+  color: $color-LightGreen;
+  font-weight: bold;
+}
+
+.cart .button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $color-darkGrey;
+  color: $color-light;
+  border: none;
+  transition: background-color 0.9s;
+  font-size: 14px;
+}
+
+.cart .button:hover {
+  background-color: $color-LightGreen;
+}
+
+.modalTitle {
+  font-size: 24px;
+}
+
+.modalBody {
+  color: $color-darkGrey;
+  text-align: center;
+}
+
+.modalFooter .button1,
+.modalFooter .button2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $color-darkGrey;
+  color: $color-light;
+  border: none;
+  transition: background-color 0.9s;
+  font-size: 16px;
+}
+
+.modalFooter .button1:hover {
+  background-color: $color-blue;
+}
+
+.modalFooter .button:hover,
+.modalFooter .button2:hover {
+  background-color: $color-LightGreen;
+}

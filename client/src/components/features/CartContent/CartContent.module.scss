@@ -1,0 +1,48 @@
+@import '../../../styles/settings.scss';
+
+.modalTitle {
+  font-size: 24px;
+}
+
+.modalBody {
+  color: $color-darkGrey;
+  text-align: center;
+}
+
+.proceed .button,
+.modalFooter .button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  transition: background-color 0.9s;
+}
+
+.modalFooter .buttonComeback,
+.modalFooter .buttonConfirm {
+  background-color: $color-darkGrey;
+  transition: background-color 0.9s;
+  color: $color-light;
+  border: none;
+}
+.proceed .button {
+  background-color: $color-LightGreen;
+}
+.proceed .button:hover {
+  background-color: $color-darkGreen;
+}
+.modalFooter .buttonComeback:hover {
+  background-color: $color-blue;
+}
+.modalFooter .buttonConfirm:hover {
+  background-color: $color-darkGreen;
+}
+
+.proceed .button {
+  width: 100%;
+  display: block;
+  font-size: 14px;
+}
+
+.modalFooter .button {
+  font-size: 16px;
+}
